@@ -53,8 +53,11 @@ rjil::jiocloud::consul::encrypt: "%{consul_gossip_encrypt}"
 #    are not reachable.
 ##
 
-#upstream_ntp_servers:
-# - 10.135.121.138
+upstream_ntp_servers:
+  - 10.140.214.14
+  - 10.140.221.235
+  - 10.140.221.232
+  - 10.140.221.236
 
 #rjil::system::proxies:
 #  "no":
