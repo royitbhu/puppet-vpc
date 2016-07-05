@@ -276,6 +276,9 @@ neutron::policy::policies:
   neutron-admin_only:
     key: 'admin_only'
     value: 'rule:context_is_admin or tenant_id:%(tenant_id)s'
+  neutron-get_port:binding:vif_type:
+    key: 'get_port:binding:vif_type'
+    value: 'rule:admin_or_owner'
 rjil::neutron::service_provider: LOADBALANCER:Opencontrail:neutron_plugin_contrail.plugins.opencontrail.loadbalancer.driver.OpencontrailLoadbalancerDriver:default
 rjil::neutron::contrail::keystone_admin_user: "%{hiera('neutron_keystone_auth_username')}"
 rjil::neutron::contrail::keystone_admin_password: "%{hiera('neutron_keystone_auth_password')}"
