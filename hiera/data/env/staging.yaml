@@ -335,7 +335,7 @@ rjil::neutron::contrail::fip_pools:
     subnet_ip_start: 10.140.220.69
     subnet_ip_end: 10.140.220.125
     public: true
-    rt_number: '10002'
+    rt_number: '10004'
     tenant_name: 'Customer-00000000000000000000247341302601'
 # Add MX routers for Contrail
 contrail::edge_routers:
