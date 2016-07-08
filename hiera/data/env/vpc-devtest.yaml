@@ -18,11 +18,11 @@ rjil::jiocloud::consul::service::interval: 120s
 
 contrail::vrouter::vrouter_physical_interface: eth3
 
-rjil::system::accounts::active_users: [vpramo,naveenreddy,saju,dpak,viveksharma]
+rjil::system::accounts::active_users: [vpramo,naveenreddy,saju,dpak,viveksharma,harsh]
 
 rjil::system::accounts::sudo_users:
   admin:
-    users: [vpramo,naveenreddy,saju,dpak,viveksharma]
+    users: [vpramo,naveenreddy,saju,dpak,viveksharma,harsh]
 ceph::conf::mon_timecheck_interval: 30
 
 ##
