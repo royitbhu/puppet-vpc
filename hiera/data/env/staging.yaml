@@ -276,6 +276,9 @@ neutron::policy::policies:
   neutron-admin_only:
     key: 'admin_only'
     value: 'rule:context_is_admin or tenant_id:%(tenant_id)s'
+  neutron-get_port:binding:vif_type:
+    key: 'get_port:binding:vif_type'
+    value: 'rule:admin_or_owner'
 rjil::neutron::service_provider: LOADBALANCER:Opencontrail:neutron_plugin_contrail.plugins.opencontrail.loadbalancer.driver.OpencontrailLoadbalancerDriver:default
 rjil::neutron::contrail::keystone_admin_user: "%{hiera('neutron_keystone_auth_username')}"
 rjil::neutron::contrail::keystone_admin_password: "%{hiera('neutron_keystone_auth_password')}"
@@ -337,6 +340,15 @@ rjil::neutron::contrail::fip_pools:
     public: true
     rt_number: '10004'
     tenant_name: 'Customer-00000000000000000000247341302601'
+  public-2:
+    network_name: public-2
+    subnet_name: public-subnet-2
+    cidr: 10.140.220.128/26
+    subnet_ip_start: 10.140.220.133
+    subnet_ip_end: 10.140.220.190
+    public: true
+    rt_number: '10005'
+    tenant_name: 'Customer-00000000000000000000857292056503'
 # Add MX routers for Contrail
 contrail::edge_routers:
   router1: {host_address: '10.204.115.116'}
