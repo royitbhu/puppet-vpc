@@ -446,9 +446,9 @@ rjil::neutron::contrail::contrail_api_server: "%{hiera('virtual_ha_ip')}"
 rjil::contrail::ec2api::db_provision: false
 ec2api::ec2api_config:
   DEFAULT/external_network:
-    value: 'public public-1 public-2'
+    value: 'public public-1 public-2 pub-oss-dev pub-oss-sit pub-oss-st pub-oss-oth'
   DEFAULT/account_profile_type:
-    value: 'low high medium'
+    value: 'low high medium low-oss-dev low-oss-sit low-oss-st low-oss-oth'
   DEFAULT/full_vpc_support:
     value: True
   DEFAULT/keystone_url:
