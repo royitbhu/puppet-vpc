@@ -350,36 +350,36 @@ rjil::neutron::contrail::fip_pools:
   pub-oss-dev:
     network_name: pub-oss-dev
     subnet_name: subnet-oss-dev
-    cidr: 10.141.121.0/24
-    subnet_ip_start: 10.141.121.5
-    subnet_ip_end: 10.141.121.253
+    cidr: 10.141.120.0/24
+    subnet_ip_start: 10.141.120.5
+    subnet_ip_end: 10.141.120.253
     public: true
     rt_number: '30000'
     tenant_name: 'Customer-00000000000000000000723220141072'
   pub-oss-sit:
     network_name: pub-oss-sit
     subnet_name: subnet-oss-sit
-    cidr: 10.141.122.0/24
-    subnet_ip_start: 10.141.122.5
-    subnet_ip_end: 10.141.122.253
+    cidr: 10.141.121.0/24
+    subnet_ip_start: 10.141.121.5
+    subnet_ip_end: 10.141.121.253
     public: true
     rt_number: '30001'
     tenant_name: 'Customer-00000000000000000000723220141072'
   pub-oss-st:
     network_name: pub-oss-st
     subnet_name: subnet-oss-st
-    cidr: 10.141.123.0/25
-    subnet_ip_start: 10.141.123.5
-    subnet_ip_end: 10.141.123.125
+    cidr: 10.141.122.0/25
+    subnet_ip_start: 10.141.122.5
+    subnet_ip_end: 10.141.122.125
     public: true
     rt_number: '30002'
     tenant_name: 'Customer-00000000000000000000723220141072'
   pub-oss-oth:
     network_name: pub-oss-oth
     subnet_name: subnet-oss-oth
-    cidr: 10.141.123.128/25
-    subnet_ip_start: 10.141.123.133
-    subnet_ip_end: 10.141.123.253
+    cidr: 10.141.122.128/25
+    subnet_ip_start: 10.141.122.133
+    subnet_ip_end: 10.141.122.253
     public: true
     rt_number: '30003'
     tenant_name: 'Customer-00000000000000000000723220141072'
