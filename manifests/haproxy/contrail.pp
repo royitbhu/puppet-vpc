@@ -109,7 +109,7 @@ class rjil::haproxy::contrail(
     balancer_ports    => $ec2api_balancer_port,
     cluster_addresses => $ec2api_backend_ips,
     virtual_ip        => $virtual_ip,
-    check_type        => 'tcp'
+    check_type        => 'tcp',
     require           => Runtime_fail['Haproxy_ready'],
   }
 
