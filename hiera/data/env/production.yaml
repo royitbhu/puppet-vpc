@@ -5,18 +5,18 @@ private_address: "%{ipaddress_10_140_210_0_23}"
 private_interface: "%{interface_10_140_210_0_23}"
 rjil::base::self_signed_cert: true
 upstream_ntp_servers:
-  - 10.140.192.4
+  - 10.140.208.4
 ntp::servers:
-  - 10.140.192.4
+  - 10.140.208.4
 localbind_host: 127.0.0.1
 ssh::server::storeconfigs_enabled: false
 
 
 # Account Management
-rjil::system::accounts::active_users: [vpramo,naveenreddy,saju,dpak,viveksharma,harsh,basil,abhilabh]
+rjil::system::accounts::active_users: [vpramo,naveenreddy,saju,dpak,viveksharma,harsh,basil,abhilabh,prashantj]
 rjil::system::accounts::sudo_users:
   admin:
-    users: [vpramo,naveenreddy,saju,dpak,viveksharma,harsh,basil,abhilabh]
+    users: [vpramo,naveenreddy,saju,dpak,viveksharma,harsh,basil,abhilabh,prashantj]
 
 # Consul Properties
 rjil::jiocloud::consul::service::interval: 120s
@@ -347,6 +347,43 @@ rjil::neutron::contrail::fip_pools:
     public: true
     rt_number: '40002'
     tenant_name: 'Customer-00000000000000000000723220141072'
+  pub-oss-dev:
+    network_name: pub-oss-dev
+    subnet_name: subnet-oss-dev
+    cidr: 10.141.120.0/24
+    subnet_ip_start: 10.141.120.5
+    subnet_ip_end: 10.141.120.253
+    public: true
+    rt_number: '30000'
+    tenant_name: 'Customer-00000000000000000000723220141072'
+  pub-oss-sit:
+    network_name: pub-oss-sit
+    subnet_name: subnet-oss-sit
+    cidr: 10.141.121.0/24
+    subnet_ip_start: 10.141.121.5
+    subnet_ip_end: 10.141.121.253
+    public: true
+    rt_number: '30001'
+    tenant_name: 'Customer-00000000000000000000723220141072'
+  pub-oss-st:
+    network_name: pub-oss-st
+    subnet_name: subnet-oss-st
+    cidr: 10.141.122.0/25
+    subnet_ip_start: 10.141.122.5
+    subnet_ip_end: 10.141.122.125
+    public: true
+    rt_number: '30002'
+    tenant_name: 'Customer-00000000000000000000723220141072'
+  pub-oss-oth:
+    network_name: pub-oss-oth
+    subnet_name: subnet-oss-oth
+    cidr: 10.141.122.128/25
+    subnet_ip_start: 10.141.122.133
+    subnet_ip_end: 10.141.122.253
+    public: true
+    rt_number: '30003'
+    tenant_name: 'Customer-00000000000000000000723220141072'
+
 
 # Add MX routers for Contrail
 contrail::edge_routers:
