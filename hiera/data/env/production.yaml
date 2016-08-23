@@ -383,8 +383,35 @@ rjil::neutron::contrail::fip_pools:
     public: true
     rt_number: '30003'
     tenant_name: 'Customer-00000000000000000000723220141072'
+  pub-nprod-1:
+    network_name: pub-nprod-1
+    subnet_name: subnet-nprod-1
+    cidr: 10.141.116.0/24
+    subnet_ip_start: 10.141.116.5
+    subnet_ip_end: 10.141.116.253
+    public: true
+    rt_number: '50001'
+    tenant_name: 'Customer-00000000000000000000723220141072'
 
+  pub-nprod-2:
+    network_name: pub-nprod-2
+    subnet_name: subnet-nprod-2
+    cidr: 10.141.117.0/25
+    subnet_ip_start: 10.141.117.5
+    subnet_ip_end: 10.141.117.125
+    public: true
+    rt_number: '50002'
+    tenant_name: 'Customer-00000000000000000000723220141072'
 
+  pub-nprod-3:
+    network_name: pub-nprod-3
+    subnet_name: subnet-nprod-3
+    cidr: 10.141.118.0/23
+    subnet_ip_start: 10.141.118.5
+    subnet_ip_end: 10.141.118.510
+    public: true
+    rt_number: '50003'
+    tenant_name: 'Customer-00000000000000000000723220141072'
 # Add MX routers for Contrail
 contrail::edge_routers:
   router1: {host_address: '10.204.115.116'}
@@ -446,9 +473,9 @@ rjil::neutron::contrail::contrail_api_server: "%{hiera('virtual_ha_ip')}"
 rjil::contrail::ec2api::db_provision: false
 ec2api::ec2api_config:
   DEFAULT/external_network:
-    value: 'public public-1 public-2 pub-oss-dev pub-oss-sit pub-oss-st pub-oss-oth'
+    value: 'public public-1 public-2 pub-oss-dev pub-oss-sit pub-oss-st pub-oss-oth pub-nprod-1 pub-nprod-2 pub-nprod-3'
   DEFAULT/account_profile_type:
-    value: 'low high medium low-oss-dev low-oss-sit low-oss-st low-oss-oth'
+    value: 'low high medium low-oss-dev low-oss-sit low-oss-st low-oss-oth high-nprod medium-nprod low-nprod'
   DEFAULT/full_vpc_support:
     value: True
   DEFAULT/keystone_url:
