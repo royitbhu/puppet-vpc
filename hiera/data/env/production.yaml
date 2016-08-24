@@ -408,7 +408,7 @@ rjil::neutron::contrail::fip_pools:
     subnet_name: subnet-nprod-3
     cidr: 10.141.118.0/23
     subnet_ip_start: 10.141.118.5
-    subnet_ip_end: 10.141.118.510
+    subnet_ip_end: 10.141.119.253
     public: true
     rt_number: '50003'
     tenant_name: 'Customer-00000000000000000000723220141072'
