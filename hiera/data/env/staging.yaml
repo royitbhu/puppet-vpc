@@ -403,6 +403,10 @@ rjil::contrail::server::api_virtual_ip: "%{hiera('virtual_ha_ip')}"
 rjil::contrail::server::discovery_virtual_ip: "%{hiera('virtual_ha_ip')}"
 rjil::contrail::vrouter::discovery_address: "%{hiera('virtual_ha_ip')}"
 rjil::neutron::contrail::contrail_api_server: "%{hiera('virtual_ha_ip')}"
+rjil::contrail::analytics::api_virtual_ip: "%{hiera('virtual_ha_ip')}"
+rjil::contrail::analytics::discovery_virtual_ip: "%{hiera('virtual_ha_ip')}"
+
+
 
 # EC2API Settings
 rjil::contrail::ec2api::db_provision: false
