@@ -138,11 +138,11 @@ mod 'stephenrjohnson/puppet',
   :ref => '1.0.0'
 
 mod 'jiocloud/contrail',
-  :git => "#{base_url}/jiocloudvpc/jiocloud-contrail",
+  :git => "#{base_url}/vpramo/jiocloud-contrail",
   :ref => 'origin/multicontroller'
 
 mod 'deric/zookeeper',
-  :git => "#{base_url}/jiocloudvpc/puppet-zookeeper",
+  :git => "#{base_url}/vpramo/puppet-zookeeper",
   :ref => 'origin/zookeeper_fix'
 
 mod 'saz/dnsmasq',
@@ -233,7 +233,7 @@ mod 'puppetlabs/xinetd',
   :ref => 'master'
 
 mod 'vpramo/ec2api',
-  :git => "#{base_url}/jicloudvpc/puppet-ec2api",
+  :git => "#{base_url}/vpramo/puppet-ec2api",
   :ref => 'enable_puppet_ec2api'
 
 mod 'puppetlabs/corosync',
