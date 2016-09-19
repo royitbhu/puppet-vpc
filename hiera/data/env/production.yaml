@@ -463,7 +463,9 @@ rjil::contrail::vrouter_standalone::vrouter_physical_interface_backup: 'em3'
 rjil::pacemaker::ipaddress: "%{ipaddress_em49}"
 rjil::pacemaker::haproxy_vip_nic: 'em49'
 virtual_ha_ip: '10.140.211.179'
+virtual_ha_netmask: '23'
 rjil::pacemaker::haproxy_vip_ip: "%{hiera('virtual_ha_ip')}"
+rjil::pacemaker::haproxy_vip_ip_netmask: "%{hiera('virtual_ha_netmask')}"
 rjil::contrail::server::api_virtual_ip: "%{hiera('virtual_ha_ip')}"
 rjil::contrail::server::discovery_virtual_ip: "%{hiera('virtual_ha_ip')}"
 rjil::contrail::vrouter::discovery_address: "%{hiera('virtual_ha_ip')}"
