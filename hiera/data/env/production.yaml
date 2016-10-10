@@ -218,6 +218,9 @@ apache::mod::ssl::ssl_cipher: "HIGH:MEDIUM:!aNULL:!MD5:!RC4"
 rjil::trust_selfsigned_cert::cert: '/etc/ssl/certs/vpc.ind-west-1.jiocloudservices.com.crt'
 
 
+#analytics
+flow_log_limit: '240'
+flow_log_limit_day: "864000"
 
 # Haproxy Settings
 rjil::haproxy::default_timeout_connect: 50000
@@ -481,6 +484,11 @@ rjil::contrail::server::api_virtual_ip: "%{hiera('virtual_ha_ip')}"
 rjil::contrail::server::discovery_virtual_ip: "%{hiera('virtual_ha_ip')}"
 rjil::contrail::vrouter::discovery_address: "%{hiera('virtual_ha_ip')}"
 rjil::neutron::contrail::contrail_api_server: "%{hiera('virtual_ha_ip')}"
+rjil::contrail::analytics::api_virtual_ip: "%{hiera('virtual_ha_ip')}"
+rjil::contrail::analytics::discovery_virtual_ip: "%{hiera('virtual_ha_ip')}"
+rjil::contrail::analytics::analytics_flow_ttl: "%{hiera('flow_log_limit')}"
+
+
 
 # EC2API Settings
 rjil::contrail::ec2api::db_provision: false
@@ -523,3 +531,12 @@ ec2api::ec2api_config:
     value: "%{hiera('keystone_public_address')}"
   keystone_authtoken/signing_dir:
     value: '/var/cache/ec2api'
+  admin_account/account_id:
+    value:  "00000000000000000000723220141072"
+  admin_account/password:
+    value:  "dGVTdE0zUGxz"
+  admin_account/query_url:
+    value:  'http://10.140.211.168:8081/analytics/query'
+  admin_account/day_limit:
+    value:  "%{hiera('flow_log_limit_day')}"
+
