@@ -191,6 +191,9 @@ verbose: 'true'
 public_network_name: 'public'
 region: RegionOne
 
+#analytics
+flow_log_limit: '240'
+flow_log_limit_day: "864000"
 
 
 # To be asked
@@ -407,6 +410,7 @@ rjil::contrail::vrouter::discovery_address: "%{hiera('virtual_ha_ip')}"
 rjil::neutron::contrail::contrail_api_server: "%{hiera('virtual_ha_ip')}"
 rjil::contrail::analytics::api_virtual_ip: "%{hiera('virtual_ha_ip')}"
 rjil::contrail::analytics::discovery_virtual_ip: "%{hiera('virtual_ha_ip')}"
+rjil::contrail::analytics::analytics_flow_ttl: "%{hiera('flow_log_limit')}"
 
 
 
@@ -449,3 +453,12 @@ ec2api::ec2api_config:
     value: "%{hiera('keystone_public_address')}"
   keystone_authtoken/signing_dir:
     value: '/var/cache/ec2api'
+  admin_account/account_id:
+    value:  "00000000000000000000013115274532"
+  admin_account/password:
+    value:  "dGVTdE0zUGxz"
+  admin_account/query_url:
+    value:  'http://10.140.214.62:8081/analytics/query'
+  admin_account/day_limit:
+    value:  "%{hiera('flow_log_limit_day')}"
+
