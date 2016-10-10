@@ -449,3 +449,12 @@ ec2api::ec2api_config:
     value: "%{hiera('keystone_public_address')}"
   keystone_authtoken/signing_dir:
     value: '/var/cache/ec2api'
+  admin_account/account_id:
+    value:  "00000000000000000000013115274532"
+  admin_account/password:
+    value:  "dGVTdE0zUGxz"
+  admin_account/query_url:
+    value:  'http://10.140.214.62:8081/analytics/query'
+  admin_account/day_limit:
+    value:  '1296000'
+
