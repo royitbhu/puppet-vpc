@@ -5,6 +5,7 @@
 class rjil::contrail::analytics (
   $api_virtual_ip   = join(values(service_discover_consul('pre-haproxy')),""),
   $discovery_virtual_ip = join(values(service_discover_consul('pre-haproxy')),""),
+  $analytics_flow_ttl   = '48',
 ) {
 
   anchor{'contrail_dep_apps':}
@@ -23,6 +24,7 @@ class rjil::contrail::analytics (
     enable_dns           => false,
     api_virtual_ip       => $api_virtual_ip,
     discovery_virtual_ip => $discovery_virtual_ip,
+    analytics_flow_ttl   => $analytics_flow_ttl,
   }
 
 }
