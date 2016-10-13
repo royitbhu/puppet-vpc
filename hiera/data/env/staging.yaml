@@ -194,6 +194,7 @@ region: RegionOne
 #analytics
 flow_log_limit: '240'
 flow_log_limit_day: "864000"
+flow_log_limit_time: "1800"
 
 
 # To be asked
@@ -461,4 +462,6 @@ ec2api::ec2api_config:
     value:  'http://10.140.214.62:8081/analytics/query'
   admin_account/day_limit:
     value:  "%{hiera('flow_log_limit_day')}"
+  admin_account/time_limit:
+    value:  "%{hiera('flow_log_limit_time')}"
 
