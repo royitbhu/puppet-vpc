@@ -178,6 +178,5 @@ node /^vpc-monitor\d+/ {
 node /^vpc-analytics\d+/ {
   include rjil::base
   include rjil::redis
-  include rjil::cassandra
   include rjil::contrail::analytics
 }
