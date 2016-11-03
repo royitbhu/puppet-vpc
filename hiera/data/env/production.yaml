@@ -472,6 +472,7 @@ contrail::vrouter::interface_is_dhcp: false
 rjil::contrail::vrouter_standalone::discovery_address: 'vpc.ind-west-1.internal.jiocloudservices.com'
 rjil::contrail::vrouter_standalone::vrouter_physical_interface: 'em49'
 rjil::contrail::vrouter_standalone::vrouter_physical_interface_backup: 'em3'
+rjil::contrail::vrouter_standalone::vrouter_physical_interface_quanta: 'p1p2'
 
 
 # Pacemaker and Corosync Configurations
