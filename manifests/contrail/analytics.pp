@@ -6,8 +6,6 @@ class rjil::contrail::analytics (
   $api_virtual_ip       = join(values(service_discover_consul('pre-haproxy')),""),
   $discovery_virtual_ip = join(values(service_discover_consul('pre-haproxy')),""),
   $analytics_flow_ttl   = '48',
-  $cassandra_ip_list = sort(values(service_discover_consul('cassandra-analytics'))),
-
   $cassandra_ip_list    = sort(values(service_discover_consul('cassandra-analytics'))),
   $cassandra_seed_hostname = 'vpc-analytics1',
   $cassandra_seeds      = values(service_discover_consul('cassandra-analytics', 'seed')),
