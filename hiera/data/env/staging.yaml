@@ -357,6 +357,7 @@ rjil::neutron::contrail::fip_pools:
 
 rt_user: 'devops1'
 rt_cred: 'vpc19082013'
+rt_address: '10.204.115.116'
 contrail::edge_routers:
   router1: {host_address: '10.204.115.116'}
   router2: {host_address: '10.204.115.117'}
@@ -449,7 +450,7 @@ ec2api::ec2api_config:
   DEFAULT/ssl_key_file:
     value: '/etc/ssl/keys/vpc.ind-west-1.staging.jiocloudservices.com.key'
   DEFAULT/router_address:
-    value: "%{hiera('contrail::edge_routers::router1::host_address')}"
+    value: "%{hiera('rt_address')}"
   DEFAULT/router_user:
     value: "%{hiera('rt_user')}"  
   DEFAULT/router_cred:
