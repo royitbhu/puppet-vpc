@@ -130,29 +130,17 @@ contrail::vrouter::vgw_subnets: ['100.1.0.0/24']
 
 rjil::system::apt::env_repositories:
   jiocloud-vpc-base:
-    location: 'http://10.140.214.61/apt/sajuptpm/vpcmainprod'
+    location: 'http://10.140.214.61/apt/vpcjiocloud/vpcbase'
     release: 'jiocloud'
     repos: 'main'
     include_src: false
     key:
-      id: '3C3C5541'
-      source: 'http://10.140.214.61/apt/sajuptpm/vpcmainprod/repo.key'
+      id: 'CDA02C16'
+      source: 'http://10.140.214.61/apt/vpcjiocloud/vpcbase/repo.key'
     pin:
       release: 'jiocloud'
       priority: '900'
-      label: 'vpcmainprod'
-  jiocloud-compute-base:
-    #To install python-glanceclient in haproxy1/2
-    location: 'http://10.140.214.5/snapshots/3a4a1b90-cc09-4817-a622-548ee45dd9e9/10.140.214.5/apt/JioCloudComputeAdmin/JioCloudComputeAdmin/'
-    release: 'jiocloud'
-    repos: 'main'
-    include_src: false
-    architecture: 'amd64'
-    trusted_source: true
-    pin:
-      release: 'jiocloud'
-      priority: '800'
-      label: 'JioCloudComputeAdmin'
+      label: 'vpcbase'
   jiocloud-vpc-puppet:
     location: 'http://10.140.214.61/apt/vpcjiocloud/vpcjiocloud'
     release: 'jiocloud'
@@ -184,25 +172,21 @@ rjil::system::apt::repositories:
     release: 'trusty'
     repos: 'main restricted universe multiverse'
     include_src: false
-    trusted_source: true
   ubuntu_updates:
     location: 'http://10.140.214.61/snapshots/d9396917-360b-4589-8c5d-6b74bd36e229/in.archive.ubuntu.com/ubuntu'
     release: 'trusty-updates'
     repos: 'main restricted universe multiverse'
     include_src: false
-    trusted_source: true
   ubuntu_security:
     location: 'http://10.140.214.61/snapshots/58ea463f-58cf-4d21-89cf-461d61b032dc/in.archive.ubuntu.com/ubuntu'
     release: 'trusty-security'
     repos: 'main restricted universe multiverse'
     include_src: false
-    trusted_source: true
   ubuntu_kilo:
     location: 'http://10.140.214.61/snapshots/bdbf3b8e-6bd7-49e7-bfe3-f076ce2c4b86/ubuntu-cloud.archive.canonical.com/ubuntu'
     release: 'trusty-updates/kilo'
     repos: 'main'
     include_src: false
-    trusted_source: true
 
 rjil::system::apt::keys:
   Canonical_Cloud_Archive:

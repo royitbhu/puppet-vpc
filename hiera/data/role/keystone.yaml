@@ -1,13 +1,13 @@
 rjil::keystone::disable_db_sync: false
 rjil::system::apt::env_repositories:
   jiocloud-vpc-base:
-    location: 'http://10.140.214.61/apt/sajuptpm/vpcmainprod'
+    location: 'http://10.140.214.61/apt/vpcjiocloud/vpcbase'
     release: 'jiocloud'
     repos: 'main'
     include_src: false
     key:
-      id: '3C3C5541'
-      source: 'http://10.140.214.61/apt/sajuptpm/vpcmainprod/repo.key'
+      id: 'CDA02C16'
+      source: 'http://10.140.214.61/apt/vpcjiocloud/vpcbase/repo.key'
   jiocloud-vpc-puppet:
     location: 'http://10.140.214.61/apt/vpcjiocloud/vpcjiocloud'
     release: 'jiocloud'
