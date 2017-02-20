@@ -71,7 +71,7 @@ rjil::system::apt::env_repositories:
 
 rjil::system::apt::repositories:
   ubuntu:
-    location: 'http://10.140.214.61/snapshots/%{hiera('ubuntu_main_snap')}/in.archive.ubuntu.com/ubuntu'
+    location: "http://10.140.214.61/snapshots/%{hiera('ubuntu_main_snap')}/in.archive.ubuntu.com/ubuntu"
     release: 'trusty'
     repos: 'main restricted universe multiverse'
     include_src: false
