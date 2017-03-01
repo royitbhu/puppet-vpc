@@ -42,6 +42,7 @@ Vagrant.configure("2") do |config|
       config.vm.provider :virtualbox do |vb, override|
         image = info['image'] || default_image
         override.vm.box = map_data['image']['virtualbox'][image]
+        override.vm.box_version = "20160119.0.0"
 
         flavor = info['flavor'] || default_flavor
         vb.memory = map_data['flavor'][flavor]['ram']
