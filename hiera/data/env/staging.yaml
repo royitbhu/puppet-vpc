@@ -10,7 +10,7 @@ ntp::servers:
   - 10.140.214.14
 localbind_host: 127.0.0.1
 ssh::server::storeconfigs_enabled: false
-
+db_connection : "mysql://rwuser:4fEUAG@10.140.214.73/ec2api"
 
 # Account Management
 rjil::system::accounts::active_users: [vpramo,naveenreddy,saju,dpak,viveksharma,harsh,basil,abhilabh,prashantj]
@@ -99,6 +99,12 @@ vpc_admin_password: '623fa925f4546bbb32885c0f8ab8552e'
 keystone_admin_token: '7623eb5b44254209e95e6d272cb16777'
 neutron_keystone_auth_username: 'neutron_service_user'
 neutron_keystone_auth_password: '5a91bd4b2450e46261d100dcc7a09374'
+
+
+## For PAAS
+neutron::server::database_connection: "%{hiera('db_connection')}"
+rjil::neutron::contrail::ec2_db: true
+
 
 # Compute
 nova_metadata_address: 'compute.ind-west-1.staging.jiocloudservices.com'
