@@ -165,6 +165,18 @@ rjil::system::apt::env_repositories:
     key:
       id: 'FA8669DA'
       source: 'http://10.140.214.61/apt/vpcjiocloud/contrail/repo.key'
+  jiocloud-vpc-vagrant:
+    location: 'http://10.140.214.61/apt/vpcjiocloud/vagrant'
+    release: 'jiocloud'
+    repos: 'main'
+    include_src: false
+    key:
+      id: 'D962FA5C'
+      source: 'http://10.140.214.61/apt/vpcjiocloud/vagrant/repo.key'
+    pin:
+      release: 'jiocloud'
+      priority: '1002'
+      label: 'vagrant'
 
 rjil::system::apt::repositories:
   ubuntu:
