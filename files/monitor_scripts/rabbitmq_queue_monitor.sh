@@ -19,6 +19,7 @@ STATUS = {"success" : 0,
     "critical" : 2,
      }
 
+#output format supported by OMD server
 OUTPUT_FORMAT = "{status} {entity} - {message}"
 
 #function to parse 'rabbitmqctl list_queues' output and store it in queueSize
