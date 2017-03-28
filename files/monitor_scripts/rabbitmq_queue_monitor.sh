@@ -4,12 +4,16 @@ import os
 import re
 import time
 
+#interval in second for each rabbitmqctl output
 INTERVAL = 3
 ITERATION = 5
+
+#variables for storing hostname and corresponding queuesize.
 hostName = []
 queueSize = [[] for _ in range(ITERATION)]
 totalQueues = 0
 
+#Status for OMD server
 STATUS = {"success" : 0,
     "warning" : 1,
     "critical" : 2,
@@ -17,6 +21,7 @@ STATUS = {"success" : 0,
 
 OUTPUT_FORMAT = "{status} {entity} - {message}"
 
+#function to parse 'rabbitmqctl list_queues' output and store it in queueSize
 def getQueueSize(x):
         cmd = "rabbitmqctl list_queues"
         out = os.popen(cmd).read()
